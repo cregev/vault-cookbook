@@ -1,0 +1,199 @@
+I, [2015-06-13T21:00:53.499723 #69566]  INFO -- default-ubuntu-1404: -----> Cleaning up any prior instances of <default-ubuntu-1404>
+I, [2015-06-13T21:00:53.500406 #69566]  INFO -- default-ubuntu-1404: -----> Destroying <default-ubuntu-1404>...
+I, [2015-06-13T21:00:55.431673 #69566]  INFO -- default-ubuntu-1404: ==> default: Forcing shutdown of VM...
+I, [2015-06-13T21:00:56.546855 #69566]  INFO -- default-ubuntu-1404: ==> default: Destroying VM and associated drives...
+I, [2015-06-13T21:00:56.840263 #69566]  INFO -- default-ubuntu-1404: Vagrant instance <default-ubuntu-1404> destroyed.
+I, [2015-06-13T21:00:56.842899 #69566]  INFO -- default-ubuntu-1404: Finished destroying <default-ubuntu-1404> (0m3.34s).
+I, [2015-06-13T21:00:56.843335 #69566]  INFO -- default-ubuntu-1404: -----> Testing <default-ubuntu-1404>
+I, [2015-06-13T21:00:56.843479 #69566]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
+I, [2015-06-13T21:00:57.871015 #69566]  INFO -- default-ubuntu-1404: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2015-06-13T21:00:58.012586 #69566]  INFO -- default-ubuntu-1404: ==> default: Importing base box 'opscode-ubuntu-14.04'...
+I, [2015-06-13T21:01:07.454853 #69566]  INFO -- default-ubuntu-1404: [KProgress: 10%[KProgress: 30%[KProgress: 40%[KProgress: 60%[KProgress: 70%[KProgress: 80%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+I, [2015-06-13T21:01:08.003035 #69566]  INFO -- default-ubuntu-1404: ==> default: Setting the name of the VM: kitchen-vault-default-ubuntu-1404_default_1434218467938_49953
+I, [2015-06-13T21:01:08.252034 #69566]  INFO -- default-ubuntu-1404: ==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+I, [2015-06-13T21:01:08.292955 #69566]  INFO -- default-ubuntu-1404: ==> default: Clearing any previously set network interfaces...
+I, [2015-06-13T21:01:08.335405 #69566]  INFO -- default-ubuntu-1404: ==> default: Preparing network interfaces based on configuration...
+I, [2015-06-13T21:01:08.335761 #69566]  INFO -- default-ubuntu-1404:     default: Adapter 1: nat
+I, [2015-06-13T21:01:08.365816 #69566]  INFO -- default-ubuntu-1404: ==> default: Forwarding ports...
+I, [2015-06-13T21:01:08.419042 #69566]  INFO -- default-ubuntu-1404:     default: 22 => 2200 (adapter 1)
+I, [2015-06-13T21:01:08.542043 #69566]  INFO -- default-ubuntu-1404: ==> default: Booting VM...
+I, [2015-06-13T21:01:08.759057 #69566]  INFO -- default-ubuntu-1404: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2015-06-13T21:01:08.965542 #69566]  INFO -- default-ubuntu-1404:     default: SSH address: 127.0.0.1:2200
+I, [2015-06-13T21:01:08.965651 #69566]  INFO -- default-ubuntu-1404:     default: SSH username: vagrant
+I, [2015-06-13T21:01:08.965758 #69566]  INFO -- default-ubuntu-1404:     default: SSH auth method: private key
+I, [2015-06-13T21:01:24.111470 #69566]  INFO -- default-ubuntu-1404:     default: Warning: Connection timeout. Retrying...
+I, [2015-06-13T21:01:24.459801 #69566]  INFO -- default-ubuntu-1404:     default: 
+I, [2015-06-13T21:01:24.459898 #69566]  INFO -- default-ubuntu-1404:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2015-06-13T21:01:24.459963 #69566]  INFO -- default-ubuntu-1404:     default: this with a newly generated keypair for better security.
+I, [2015-06-13T21:01:24.850512 #69566]  INFO -- default-ubuntu-1404:     default: 
+I, [2015-06-13T21:01:24.850568 #69566]  INFO -- default-ubuntu-1404:     default: Inserting generated public key within guest...
+I, [2015-06-13T21:01:24.915272 #69566]  INFO -- default-ubuntu-1404:     default: Removing insecure key from the guest if its present...
+I, [2015-06-13T21:01:24.948853 #69566]  INFO -- default-ubuntu-1404:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2015-06-13T21:01:25.816701 #69566]  INFO -- default-ubuntu-1404: ==> default: Machine booted and ready!
+I, [2015-06-13T21:01:25.817218 #69566]  INFO -- default-ubuntu-1404: ==> default: Checking for guest additions in VM...
+I, [2015-06-13T21:01:25.858128 #69566]  INFO -- default-ubuntu-1404: ==> default: Setting hostname...
+I, [2015-06-13T21:01:28.527313 #69566]  INFO -- default-ubuntu-1404: ==> default: Machine not provisioning because `--no-provision` is specified.
+I, [2015-06-13T21:01:30.100795 #69566]  INFO -- default-ubuntu-1404: [SSH] Established
+I, [2015-06-13T21:01:30.101074 #69566]  INFO -- default-ubuntu-1404: Vagrant instance <default-ubuntu-1404> created.
+I, [2015-06-13T21:01:30.102108 #69566]  INFO -- default-ubuntu-1404: Finished creating <default-ubuntu-1404> (0m33.26s).
+I, [2015-06-13T21:01:30.102206 #69566]  INFO -- default-ubuntu-1404: -----> Converging <default-ubuntu-1404>...
+I, [2015-06-13T21:01:30.103178 #69566]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2015-06-13T21:01:30.103279 #69566]  INFO -- default-ubuntu-1404: Preparing dna.json
+I, [2015-06-13T21:01:30.103861 #69566]  INFO -- default-ubuntu-1404: Resolving cookbook dependencies with Berkshelf 3.2.4...
+I, [2015-06-13T21:01:41.209456 #69566]  INFO -- default-ubuntu-1404: Removing non-cookbook files before transfer
+I, [2015-06-13T21:01:41.218038 #69566]  INFO -- default-ubuntu-1404: Preparing validation.pem
+I, [2015-06-13T21:01:41.219038 #69566]  INFO -- default-ubuntu-1404: Preparing client.rb
+I, [2015-06-13T21:01:41.226132 #69566]  INFO -- default-ubuntu-1404: -----> Installing Chef Omnibus (install only if missing)
+I, [2015-06-13T21:01:41.226564 #69566]  INFO -- default-ubuntu-1404: Downloading https://www.chef.io/chef/install.sh to file /tmp/install.sh
+I, [2015-06-13T21:01:41.226808 #69566]  INFO -- default-ubuntu-1404: Trying wget...
+I, [2015-06-13T21:01:42.108372 #69566]  INFO -- default-ubuntu-1404: Download complete.
+I, [2015-06-13T21:01:42.123217 #69566]  INFO -- default-ubuntu-1404: Downloading Chef  for ubuntu...
+I, [2015-06-13T21:01:42.123600 #69566]  INFO -- default-ubuntu-1404: downloading https://www.chef.io/chef/metadata?v=&prerelease=false&nightlies=false&p=ubuntu&pv=14.04&m=x86_64
+I, [2015-06-13T21:01:42.123878 #69566]  INFO -- default-ubuntu-1404:   to file /tmp/install.sh.1347/metadata.txt
+I, [2015-06-13T21:01:42.124077 #69566]  INFO -- default-ubuntu-1404: trying wget...
+I, [2015-06-13T21:01:43.244301 #69566]  INFO -- default-ubuntu-1404: url	https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/10.04/x86_64/chef_12.3.0-1_amd64.deb
+I, [2015-06-13T21:01:43.245001 #69566]  INFO -- default-ubuntu-1404: md5	d8421c9b3010deb03e713ada00387e8a
+I, [2015-06-13T21:01:43.245708 #69566]  INFO -- default-ubuntu-1404: sha256	e06eb748e44d0a323f4334aececdf3c2c74d2f97323678ad3a43c33ac32b4f81
+I, [2015-06-13T21:01:43.248909 #69566]  INFO -- default-ubuntu-1404: downloaded metadata file looks valid...
+I, [2015-06-13T21:01:43.255879 #69566]  INFO -- default-ubuntu-1404: downloading https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/10.04/x86_64/chef_12.3.0-1_amd64.deb
+I, [2015-06-13T21:01:43.256108 #69566]  INFO -- default-ubuntu-1404:   to file /tmp/install.sh.1347/chef_12.3.0-1_amd64.deb
+I, [2015-06-13T21:01:43.256290 #69566]  INFO -- default-ubuntu-1404: trying wget...
+I, [2015-06-13T21:02:38.894575 #69566]  INFO -- default-ubuntu-1404: Comparing checksum with sha256sum...
+I, [2015-06-13T21:02:39.128858 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:39.129319 #69566]  INFO -- default-ubuntu-1404: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2015-06-13T21:02:39.129483 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:39.129779 #69566]  INFO -- default-ubuntu-1404: You are installing an omnibus package without a version pin.  If you are installing
+I, [2015-06-13T21:02:39.130038 #69566]  INFO -- default-ubuntu-1404: on production servers via an automated process this is DANGEROUS and you will
+I, [2015-06-13T21:02:39.130274 #69566]  INFO -- default-ubuntu-1404: be upgraded without warning on new releases, even to new major releases.
+I, [2015-06-13T21:02:39.130483 #69566]  INFO -- default-ubuntu-1404: Letting the version float is only appropriate in desktop, test, development or
+I, [2015-06-13T21:02:39.130689 #69566]  INFO -- default-ubuntu-1404: CI/CD environments.
+I, [2015-06-13T21:02:39.130827 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:39.131090 #69566]  INFO -- default-ubuntu-1404: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2015-06-13T21:02:39.131213 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:39.131371 #69566]  INFO -- default-ubuntu-1404: Installing Chef 
+I, [2015-06-13T21:02:39.131500 #69566]  INFO -- default-ubuntu-1404: installing with dpkg...
+I, [2015-06-13T21:02:39.174251 #69566]  INFO -- default-ubuntu-1404: Selecting previously unselected package chef.
+I, [2015-06-13T21:02:39.262683 #69566]  INFO -- default-ubuntu-1404: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 32400 files and directories currently installed.)
+I, [2015-06-13T21:02:39.263852 #69566]  INFO -- default-ubuntu-1404: Preparing to unpack .../chef_12.3.0-1_amd64.deb ...
+I, [2015-06-13T21:02:39.266836 #69566]  INFO -- default-ubuntu-1404: Unpacking chef (12.3.0-1) ...
+I, [2015-06-13T21:02:43.908411 #69566]  INFO -- default-ubuntu-1404: Setting up chef (12.3.0-1) ...
+I, [2015-06-13T21:02:43.994121 #69566]  INFO -- default-ubuntu-1404: Thank you for installing Chef!
+I, [2015-06-13T21:02:44.038430 #69566]  INFO -- default-ubuntu-1404: Transferring files to <default-ubuntu-1404>
+I, [2015-06-13T21:02:45.084825 #69566]  INFO -- default-ubuntu-1404: Starting Chef Client, version 12.3.0
+I, [2015-06-13T21:02:46.565739 #69566]  INFO -- default-ubuntu-1404: Creating a new client identity for default-ubuntu-1404 using the validator key.
+I, [2015-06-13T21:02:46.721879 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:46+00:00] WARN: Child with name 'dna.json' found in multiple directories: /tmp/kitchen/dna.json and /tmp/kitchen/dna.json
+I, [2015-06-13T21:02:46.724833 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:46+00:00] WARN: Child with name 'dna.json' found in multiple directories: /tmp/kitchen/dna.json and /tmp/kitchen/dna.json
+I, [2015-06-13T21:02:46.730046 #69566]  INFO -- default-ubuntu-1404: resolving cookbooks for run list: ["vault::default"]
+I, [2015-06-13T21:02:46.730833 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:46+00:00] WARN: Child with name 'dna.json' found in multiple directories: /tmp/kitchen/dna.json and /tmp/kitchen/dna.json
+I, [2015-06-13T21:02:47.088680 #69566]  INFO -- default-ubuntu-1404: Synchronizing Cookbooks:
+I, [2015-06-13T21:02:47.395628 #69566]  INFO -- default-ubuntu-1404:   - vault
+I, [2015-06-13T21:02:47.492259 #69566]  INFO -- default-ubuntu-1404:   - ark
+I, [2015-06-13T21:02:47.837101 #69566]  INFO -- default-ubuntu-1404:   - windows
+I, [2015-06-13T21:02:47.869710 #69566]  INFO -- default-ubuntu-1404:   - 7-zip
+I, [2015-06-13T21:02:47.877278 #69566]  INFO -- default-ubuntu-1404:   - chef_handler
+I, [2015-06-13T21:02:47.877923 #69566]  INFO -- default-ubuntu-1404: Compiling Cookbooks...
+I, [2015-06-13T21:02:47.905509 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.905929 #69566]  INFO -- default-ubuntu-1404: ================================================================================
+I, [2015-06-13T21:02:47.906477 #69566]  INFO -- default-ubuntu-1404: Recipe Compile Error in /tmp/kitchen/cache/cookbooks/vault/providers/config.rb
+I, [2015-06-13T21:02:47.906751 #69566]  INFO -- default-ubuntu-1404: ================================================================================
+I, [2015-06-13T21:02:47.907042 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.907463 #69566]  INFO -- default-ubuntu-1404: SyntaxError
+I, [2015-06-13T21:02:47.907701 #69566]  INFO -- default-ubuntu-1404: -----------
+I, [2015-06-13T21:02:47.908047 #69566]  INFO -- default-ubuntu-1404: /tmp/kitchen/cache/cookbooks/vault/providers/config.rb:25: syntax error, unexpected keyword_end, expecting end-of-input
+I, [2015-06-13T21:02:47.908190 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.908698 #69566]  INFO -- default-ubuntu-1404: Cookbook Trace:
+I, [2015-06-13T21:02:47.908995 #69566]  INFO -- default-ubuntu-1404: ---------------
+I, [2015-06-13T21:02:47.909314 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/mixin/from_file.rb:42:in `class_eval'
+I, [2015-06-13T21:02:47.909797 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/mixin/from_file.rb:42:in `class_from_file'
+I, [2015-06-13T21:02:47.910085 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/provider/lwrp_base.rb:96:in `build_from_file'
+I, [2015-06-13T21:02:47.910310 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:211:in `load_lwrp_provider'
+I, [2015-06-13T21:02:47.922546 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:202:in `block in load_lwrps_from_cookbook'
+I, [2015-06-13T21:02:47.922824 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:201:in `each'
+I, [2015-06-13T21:02:47.922886 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:201:in `load_lwrps_from_cookbook'
+I, [2015-06-13T21:02:47.922922 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:121:in `block in compile_lwrps'
+I, [2015-06-13T21:02:47.922949 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:120:in `each'
+I, [2015-06-13T21:02:47.922968 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:120:in `compile_lwrps'
+I, [2015-06-13T21:02:47.922985 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/run_context/cookbook_compiler.rb:73:in `compile'
+I, [2015-06-13T21:02:47.923143 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.923169 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/policy_builder/expand_node_object.rb:87:in `setup_run_context'
+I, [2015-06-13T21:02:47.923189 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/client.rb:256:in `setup_run_context'
+I, [2015-06-13T21:02:47.923206 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/client.rb:454:in `run'
+I, [2015-06-13T21:02:47.923340 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.923365 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application.rb:259:in `fork'
+I, [2015-06-13T21:02:47.923386 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application.rb:259:in `fork_chef_client'
+I, [2015-06-13T21:02:47.923405 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application.rb:225:in `block in run_chef_client'
+I, [2015-06-13T21:02:47.923422 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/local_mode.rb:39:in `with_server_connectivity'
+I, [2015-06-13T21:02:47.923440 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application.rb:213:in `run_chef_client'
+I, [2015-06-13T21:02:47.923457 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application/client.rb:402:in `block in interval_run_chef_client'
+I, [2015-06-13T21:02:47.923474 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application/client.rb:392:in `loop'
+I, [2015-06-13T21:02:47.923492 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application/client.rb:392:in `interval_run_chef_client'
+I, [2015-06-13T21:02:47.923529 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application/client.rb:382:in `run_application'
+I, [2015-06-13T21:02:47.923549 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/lib/chef/application.rb:60:in `run'
+I, [2015-06-13T21:02:47.923577 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/embedded/apps/chef/bin/chef-client:26:in `<top (required)>'
+I, [2015-06-13T21:02:47.923592 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/bin/chef-client:51:in `load'
+I, [2015-06-13T21:02:47.923606 #69566]  INFO -- default-ubuntu-1404:   /opt/chef/bin/chef-client:51:in `<main>'
+I, [2015-06-13T21:02:47.923623 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.923636 #69566]  INFO -- default-ubuntu-1404: Relevant File Content:
+I, [2015-06-13T21:02:47.923650 #69566]  INFO -- default-ubuntu-1404: ----------------------
+I, [2015-06-13T21:02:47.923897 #69566]  INFO -- default-ubuntu-1404: /opt/chef/embedded/apps/chef/lib/chef/mixin/from_file.rb:
+I, [2015-06-13T21:02:47.923919 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.923935 #69566]  INFO -- default-ubuntu-1404:  35:  
+I, [2015-06-13T21:02:47.923950 #69566]  INFO -- default-ubuntu-1404:  36:        # Loads a given ruby file, and runs class_eval against it in the context of the current
+I, [2015-06-13T21:02:47.923966 #69566]  INFO -- default-ubuntu-1404:  37:        # object.
+I, [2015-06-13T21:02:47.923980 #69566]  INFO -- default-ubuntu-1404:  38:        #
+I, [2015-06-13T21:02:47.923994 #69566]  INFO -- default-ubuntu-1404:  39:        # Raises an IOError if the file cannot be found, or is not readable.
+I, [2015-06-13T21:02:47.924020 #69566]  INFO -- default-ubuntu-1404:  40:        def class_from_file(filename)
+I, [2015-06-13T21:02:47.924034 #69566]  INFO -- default-ubuntu-1404:  41:          if File.exists?(filename) && File.readable?(filename)
+I, [2015-06-13T21:02:47.924048 #69566]  INFO -- default-ubuntu-1404:  42>>           self.class_eval(IO.read(filename), filename, 1)
+I, [2015-06-13T21:02:47.924062 #69566]  INFO -- default-ubuntu-1404:  43:          else
+I, [2015-06-13T21:02:47.924077 #69566]  INFO -- default-ubuntu-1404:  44:            raise IOError, "Cannot open or read #{filename}!"
+I, [2015-06-13T21:02:47.924091 #69566]  INFO -- default-ubuntu-1404:  45:          end
+I, [2015-06-13T21:02:47.924104 #69566]  INFO -- default-ubuntu-1404:  46:        end
+I, [2015-06-13T21:02:47.924118 #69566]  INFO -- default-ubuntu-1404:  47:  
+I, [2015-06-13T21:02:47.924132 #69566]  INFO -- default-ubuntu-1404:  48:      end
+I, [2015-06-13T21:02:47.924145 #69566]  INFO -- default-ubuntu-1404:  49:    end
+I, [2015-06-13T21:02:47.924158 #69566]  INFO -- default-ubuntu-1404:  50:  end
+I, [2015-06-13T21:02:47.924171 #69566]  INFO -- default-ubuntu-1404:  51:  
+I, [2015-06-13T21:02:47.924185 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.924199 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.924459 #69566]  INFO -- default-ubuntu-1404: Running handlers:
+I, [2015-06-13T21:02:47.924543 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:48+00:00] ERROR: Running exception handlers
+I, [2015-06-13T21:02:47.924627 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.924648 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:48+00:00] ERROR: Exception handlers complete
+I, [2015-06-13T21:02:47.924775 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:48+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2015-06-13T21:02:47.924856 #69566]  INFO -- default-ubuntu-1404: 
+I, [2015-06-13T21:02:47.942143 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:48+00:00] ERROR: /tmp/kitchen/cache/cookbooks/vault/providers/config.rb:25: syntax error, unexpected keyword_end, expecting end-of-input
+I, [2015-06-13T21:02:49.070835 #69566]  INFO -- default-ubuntu-1404: [2015-06-13T18:02:49+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2015-06-13T21:02:49.126370 #69566] ERROR -- default-ubuntu-1404: Converge failed on instance <default-ubuntu-1404>.
+E, [2015-06-13T21:02:49.126496 #69566] ERROR -- default-ubuntu-1404: ------Exception-------
+E, [2015-06-13T21:02:49.126521 #69566] ERROR -- default-ubuntu-1404: Class: Kitchen::ActionFailed
+E, [2015-06-13T21:02:49.126538 #69566] ERROR -- default-ubuntu-1404: Message: SSH exited (1) for command: [sh -c '
+
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889
+']
+E, [2015-06-13T21:02:49.126552 #69566] ERROR -- default-ubuntu-1404: ---Nested Exception---
+E, [2015-06-13T21:02:49.126565 #69566] ERROR -- default-ubuntu-1404: Class: Kitchen::Transport::SshFailed
+E, [2015-06-13T21:02:49.126578 #69566] ERROR -- default-ubuntu-1404: Message: SSH exited (1) for command: [sh -c '
+
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889
+']
+E, [2015-06-13T21:02:49.126591 #69566] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2015-06-13T21:02:49.126604 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/provisioner/base.rb:74:in `rescue in call'
+E, [2015-06-13T21:02:49.126618 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/provisioner/base.rb:77:in `call'
+E, [2015-06-13T21:02:49.126631 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:366:in `block in converge_action'
+E, [2015-06-13T21:02:49.126645 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:488:in `call'
+E, [2015-06-13T21:02:49.126665 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:488:in `synchronize_or_call'
+E, [2015-06-13T21:02:49.126682 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:453:in `block in action'
+E, [2015-06-13T21:02:49.126697 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-06-13T21:02:49.126709 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:452:in `action'
+E, [2015-06-13T21:02:49.126722 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:362:in `converge_action'
+E, [2015-06-13T21:02:49.126734 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:341:in `block in transition_to'
+E, [2015-06-13T21:02:49.126747 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:340:in `each'
+E, [2015-06-13T21:02:49.126760 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:340:in `transition_to'
+E, [2015-06-13T21:02:49.126773 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:160:in `verify'
+E, [2015-06-13T21:02:49.126786 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:189:in `block in test'
+E, [2015-06-13T21:02:49.126798 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-06-13T21:02:49.126811 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/instance.rb:185:in `test'
+E, [2015-06-13T21:02:49.126824 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-06-13T21:02:49.126847 #69566] ERROR -- default-ubuntu-1404: /Users/costya/.rvm/gems/ruby-2.1.5@global/gems/test-kitchen-1.4.0/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-06-13T21:02:49.126862 #69566] ERROR -- default-ubuntu-1404: ----------------------

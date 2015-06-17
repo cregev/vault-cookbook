@@ -1,0 +1,22 @@
+#Upstart for Vault
+description "Vault Up Start Service(Upstart)"
+
+start on (local-filesystems and net-device-up IFACE!=lo)
+stop on runlevel [06]
+
+
+PIDFILE=<%= node[:vault][:pid_file] %>
+LOGFILE=<%= node[:vault][:logs_dir] %>/vault.log
+VAULT_INCLUDE='<%= node[:vault][:install_dir] %>/vault/vault server -config=<%= node.vault[:conf_dir] %>/config.hcl'
+RUNAS=<%= node[:vault][:user] %>
+CMD="$VAULT_INCLUDE &> \"$LOGFILE\" & echo \$!"
+
+exec su -c "$CMD" $RUNAS > "$PIDFILE"
+
+return $?
+
+
+respawn
+respawn limit 10 10
+
+

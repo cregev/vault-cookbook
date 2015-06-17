@@ -1,0 +1,9 @@
+backend "consul" {
+  address = "<%= node[:vault][:backend][:address] %>:<%= node[:vault][:backend][:port] %>"
+  path = "vault"
+}
+
+listener "tcp" {
+ address = "<%= node[:vault][:listener][:address] %>:<%= node[:vault][:listener][:port] %>"
+ tls_disable = 1
+}

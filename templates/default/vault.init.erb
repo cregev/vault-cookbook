@@ -1,0 +1,147 @@
+#!/usr/bin/env bash
+#
+# Vault
+#
+# chkconfig:   - 57 47
+# description: vault
+# processname: vault
+# config:      <%= node[:vault][:conf_dir] %>/config.hcl
+
+# [Source networking configuration]
+if [ -f /etc/sysconfig/network ]; then source /etc/sysconfig/network; fi
+
+# [Set limits for environments ignoring `/etc/security/limits.d`]
+ulimit -n <%= node[:vault][:limits][:nofile] %>
+ulimit -l <%= node[:vault][:limits][:memlock] %>
+
+# [Exit if networking is not up]
+[ "$NETWORKING" = "no" ] && exit
+
+PIDFILE=<%= node[:vault][:pid_file] %>
+LOGFILE=<%= node[:vault][:logs_dir] %>/vault.log
+RUNAS=<%= node[:vault][:user] %>
+VAULT_INCLUDE='<%= node[:vault][:install_dir] %>/vault/vault server -config=<%= node.vault[:conf_dir] %>/config.hcl'
+CHECK_PID_RUNNING=$(ps -efH | grep "vault server" | grep -v grep | awk '{print $2}')
+
+start() {
+    if [ -f $PIDFILE ]; then
+      # PIDFILE EXISTS -- IS VAULT RUNNING?
+      echo -e "\033[31;1mPID file found in $PIDFILE, Vault already running?\033[0m"
+      vault_pid="$(cat $PIDFILE)"
+      pid_running="$( ps ax | grep 'vault' | grep $vault_pid )"
+
+      if [ ! -z "$pid_running" ] ; then
+        # EXIT IF VAULT IS ALREADY RUNNING
+              echo -e "\033[31;1mPID $vauld_pid still alive, already running...\033[0m"
+              return 1
+      fi
+    fi
+
+    echo -e "\033[1mStarting Vault...\033[0m"
+    local CMD="$VAULT_INCLUDE &> \"$LOGFILE\" & echo \$!"
+    su -c "$CMD" $RUNAS > "$PIDFILE"
+    return $?
+}
+
+stop() {
+    if [[ -f $PIDFILE ]]; then
+      echo -n -e "\033[1mStopping Vault...\033[0m"
+
+      # REMOVE PIDFILE AND EXIT IF PROCESS NOT RUNNING
+      if [ ! "$CHECK_PID_RUNNING" ]; then
+        echo -e "\033[1mPID file found, but no matching process running?\033[0m"
+        echo    "Removing PID file..."
+        rm $PIDFILE
+        exit 0
+      fi
+      # KILL PROCESS
+      pid=$(cat $PIDFILE)
+      su <%= node[:vault][:user] %> -m -c "kill $(cat $PIDFILE)"
+      r=$?
+
+      # Check for process
+      timeout=0
+      while [ $(ps -p $pid | wc -l ) -gt '1' ]; do
+        echo -n '.'
+        (( timeout ++))
+        if [ $timeout -gt '30' ]; then return; fi
+        sleep 1
+      done;
+
+      # Check for pidfile
+      timeout=0
+      while [ -f $PIDFILE  ]; do
+        echo -n '.'
+        (( timeout++ ))
+        if [ $timeout -gt '15' ]; then return; fi
+        sleep 1
+      done; echo
+      return $r
+    else
+      echo -e "\033[1mNo PID file found -- Vault not running?\033[0m"
+    fi
+}
+
+restart() {
+    stop
+    timeout=30
+    while ps aux | grep "vault server" | grep -e "$PIDFILE"; do
+      echo -n '.'
+      (( timeout-- ))
+      if [ $timeout -lt '1' ]; then return; fi
+      sleep 1
+    done;
+    start
+}
+
+status() {
+  # GOT PIDFILE?
+  [ -f $PIDFILE ] && pid=$(cat $PIDFILE)
+
+  # RUNNING
+  if [[ $pid && -d "/proc/$pid" ]]; then
+    version=$(/usr/local/vault/vault version)
+    echo -e "\033[1;37;46m$version running with PID $pid\033[0m"
+    
+    # INCORRECT PID?
+    if [ $pid != $CHECK_PID_RUNNING ]; then
+      echo -e "\033[1;31;40m[!] Incorrect PID found in $PIDFILE: $pid\033[0m"
+      return 1
+    fi
+    return 0
+  fi
+
+  # NOT RUNNING
+  if [[ ! $pid || ! -d "/proc/$pid" ]]; then
+    echo -e "\033[1;33;40mVault not running\033[0m"
+    return 3
+  fi
+
+  # STALE PID FOUND
+  if [[ ! -d "/proc/$pid" && -f $PIDFILE ]]; then
+    echo -e "\033[1;31;40m[!] Stale PID found in $PIDFILE\033[0m"
+    return 1
+  fi
+}
+
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        restart
+        ;;
+  status)
+        status $2
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart|status|}"
+        exit 1
+
+esac
+
+exit $?
