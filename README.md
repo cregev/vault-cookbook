@@ -49,7 +49,7 @@ Attributes
     <td><tt>['vault']['checksum']</tt></td>
     <td>String</td>
     <td>Chcecksum for vault downloaded file</td>
-    <td><tt>12c28cf7d6b6052c24817072fb95d4cfa2a391b507c705e960faf11afb5ee6ad</tt></td>
+    <td><tt>defaults to the chosen version and Platform</tt></td>
   </tr>
   <tr>
     <td><tt>['vault']['install']['dir']</tt></td>
