@@ -1,3 +1,11 @@
+#
+# Cookbook Name:: vault
+# [Recipe:: service]
+#
+# Copyright 2015, Costya.Regev@me.com
+#
+# All rights reserved - Do Not Redistribute
+
 # [Create Vault service]
 case node['platform']
   when 'ubuntu'
