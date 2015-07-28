@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 
-gem chef
-gem test-kitchen
-gem kitchen-vagrant
-gem berkshelf
-gem chefspec
-
-
+gem 'berkshelf'
+gem 'serverspec'
+gem 'foodcritic'
+gem 'chefspec'
+gem 'chef', '~> 11.16'
+gem 'rubocop', require: false
+gem 'coveralls', require: false
+gem 'stove'

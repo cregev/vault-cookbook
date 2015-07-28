@@ -1,0 +1,14 @@
+language: ruby
+sudo: false
+bundler_args: --jobs 4 --without integration
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.2.1
+  - 2.1.5
+script:
+  - bundle exec rake
+notifications:
+  email:
+    recipients:
+      - costya@totango.com

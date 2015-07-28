@@ -20,7 +20,7 @@ case node['platform']
     end
 end
 
-
+# [Vault Service supports]
 service "vault" do
   supports :status => true, :restart => true , :start => true , :stop => true
   action [:enable, :start]

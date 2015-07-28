@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistributeinclude_recipe "ark"
 
+# [Check system kernel, in order to know which version of vault to fetch]
 install_arch = node['kernel']['machine'] =~ /x86_64/ ? 'amd64' : '386'
 install_version = ['vault', node['vault']['version'], node['os'], install_arch].join('_')
 install_checksum = node['vault']['checksums'].fetch(install_version)
