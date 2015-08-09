@@ -60,11 +60,3 @@ directory node.vault[:pid_path] do
 end
 
 
-# [Config file for Vault Server]
-template "config.hcl" do
-  path "#{node.vault[:conf_dir]}/config.hcl"
-  source node.vault[:templates][:config]
-  owner node.vault[:user] and group node.vault[:user] and mode 0755
-  action [:create]
-  notifies :restart, 'service[vault]'
-end

@@ -1,22 +1,18 @@
 #Upstart for Vault
-description "Vault Up Start Service(Upstart)"
+description "Vault Up Start Service"
 
-start on (local-filesystems and net-device-up IFACE!=lo)
-stop on runlevel [06]
-
-
-PIDFILE=<%= node[:vault][:pid_file] %>
-LOGFILE=<%= node[:vault][:logs_dir] %>/vault.log
-VAULT_INCLUDE='<%= node[:vault][:install_dir] %>/vault/vault server -config=<%= node.vault[:conf_dir] %>/config.hcl'
-RUNAS=<%= node[:vault][:user] %>
-CMD="$VAULT_INCLUDE &> \"$LOGFILE\" & echo \$!"
-
-exec su -c "$CMD" $RUNAS > "$PIDFILE"
-
-return $?
-
+start on startup
+stop on runlevel [!2345]
 
 respawn
-respawn limit 10 10
+respawn limit 10 20
 
 
+exec su - <%= node[:vault][:user] %> -c <%= node[:vault][:install_dir] %>/vault/vault -config=<%= node.vault[:conf_dir] %>/config.hcl 2>&1 >> <%= node[:vault][:logs_dir] %>/vault.log
+
+post-stop script
+  sleep 2
+  if /usr/bin/pgrep -u vault; then
+    /usr/bin/pgrep -u vault | /usr/bin/xargs kill -9
+  fi
+end script
