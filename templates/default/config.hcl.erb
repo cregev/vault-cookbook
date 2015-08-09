@@ -1,3 +1,4 @@
+# Generated & Managed by Chef for <%= node[:fqdn] %>#
 backend "consul" {
   address = "<%= node[:vault][:backend][:address] %>:<%= node[:vault][:backend][:port] %>"
   path = "vault"
