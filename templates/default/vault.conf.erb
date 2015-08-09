@@ -8,11 +8,11 @@ respawn
 respawn limit 10 20
 
 
-exec su - <%= node[:vault][:user] %> -c <%= node[:vault][:install_dir] %>/vault/vault -config=<%= node.vault[:conf_dir] %>/config.hcl 2>&1 >> <%= node[:vault][:logs_dir] %>/vault.log
+exec su - <%= node[:vault][:user] %> -c <%= node[:vault][:install_dir] %>/vault/vault server -config=<%= node.vault[:conf_dir] %>/config.hcl 2>&1 >> <%= node[:vault][:logs_dir] %>/vault.log
 
 post-stop script
   sleep 2
-  if /usr/bin/pgrep -u vault; then
-    /usr/bin/pgrep -u vault | /usr/bin/xargs kill -9
+  if /usr/bin/pgrep "vault server"; then
+    /usr/bin/pgrep "vault server" | /usr/bin/xargs kill -9
   fi
 end script
